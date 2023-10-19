@@ -43,9 +43,9 @@ The project's structure is organized as follows:
 - `dashboard.php`: User dashboard for team management.
 - `teams/`: Team management pages, including create, edit, and delete functionalities.
 - `tasks/`: Task management pages within teams.
-- `css/`: Stylesheets for a visually appealing interface.
+- `styles/`: Stylesheets for a visually appealing interface.
 - `js/`: JavaScript files for interactive functionalities.
-- `img/`: Image resources for user interface elements.
+- `images/`: Image resources for user interface elements.
 
 ## Usage
 
