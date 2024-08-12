@@ -1,59 +1,85 @@
 # Team Manager Application
 
-Welcome to the Team Manager Application project, developed as a part of the CMM007 Intranet Systems course. This web-based application is designed to help manage and organize teams efficiently. It has been built using PHP, HTML, CSS, JavaScript, and Bootstrap for user-friendly and responsive web development.
+## Overview
 
-## Table of Contents
+The **Team Manager Application** is a web-based tool designed to streamline the management of teams within an organization. It provides features for managing team members, assigning tasks, tracking progress, and generating reports. The application leverages a combination of frontend technologies (HTML, CSS, JavaScript) and backend technologies (PHP, MySQL) to deliver a responsive and user-friendly interface.
 
-- [Project Overview](#project-overview)
-- [Prerequisites](#prerequisites)
-- [Project Features](#project-features)
-- [Project Structure](#project-structure)
-- [Usage](#usage)
+## Features
 
-## Project Overview
+- **User Management**: Add, edit, and remove team members, with role-based access control.
+- **Task Assignment**: Easily assign tasks to team members, set deadlines, and monitor progress.
+- **Dashboard Overview**: Get a quick overview of team performance and task status on the dashboard.
+- **Reporting**: Generate reports to track team productivity and task completion.
+- **Responsive Design**: The application is fully responsive, ensuring a smooth experience across devices.
 
-The Team Manager Application is a comprehensive solution for managing teams and their associated data. This project leverages various technologies and web development best practices to create an intuitive and efficient platform for team management.
+## Requirements
 
-## Prerequisites
+- **Web Server**: Apache or any other compatible web server.
+- **PHP**: Version 7.x or later.
+- **MySQL**: For database management.
+- **Node.js** (Optional): For compiling SASS files if customization is required.
 
-To run and contribute to this project, you need the following prerequisites:
+## Installation
 
-- A web server with PHP support.
-- A modern web browser.
-- Familiarity with web development technologies, including HTML, CSS, JavaScript, and Bootstrap.
+1. **Clone the Repository**:
 
-## Project Features
+    ```bash
+    git clone https://github.com/yourusername/team-manager.git
+    cd team-manager
+    ```
 
-Key features of the Team Manager Application include:
+2. **Set Up the Database**:
 
-- User authentication and role-based access control.
-- Team creation, modification, and deletion.
-- User assignment to teams.
-- Task management within teams.
-- Interactive and user-friendly interface designed with Bootstrap.
-- Responsive design for a seamless experience on various devices.
+   - Create a MySQL database.
+   - Import the provided SQL file to set up the database schema and initial data.
+
+    ```sql
+    mysql -u username -p database_name < database.sql
+    ```
+
+3. **Configure the Application**:
+
+   - Update the database configuration in the `config.php` file with your database details.
+
+    ```php
+    $db_host = 'localhost';
+    $db_user = 'your_username';
+    $db_pass = 'your_password';
+    $db_name = 'your_database_name';
+    ```
+
+4. **Deploy the Application**:
+
+   - Copy the project files to your web server's root directory (e.g., `/var/www/html/team-manager`).
+   - Ensure the web server has write permissions to certain directories if needed (e.g., for file uploads).
+
+5. **Compile SASS (Optional)**:
+
+   If you wish to customize the styles, you can compile the SASS files located in the `scss/` directory.
+
+    ```bash
+    npm install
+    npm run build-css
+    ```
+
+6. **Access the Application**:
+
+   Open your browser and navigate to `http://localhost/team-manager` (or the appropriate URL for your server).
 
 ## Project Structure
 
-The project's structure is organized as follows:
+- **`styles/`**: Contains CSS files, including Bootstrap and custom styles.
+- **`scss/`**: SASS files for generating custom CSS.
+- **`js/`**: JavaScript files handling frontend interactivity.
+- **`images/`**: Image assets used throughout the application.
+- **`php/`**: Contains backend PHP scripts managing the application's logic.
+- **`database.sql`**: SQL file for setting up the application's database.
+- **`config.php`**: Configuration file for database connection and other settings.
 
-- `index.php`: The application's main entry point.
-- `login.php`: User authentication and login page.
-- `register.php`: User registration page.
-- `dashboard.php`: User dashboard for team management.
-- `teams/`: Team management pages, including create, edit, and delete functionalities.
-- `tasks/`: Task management pages within teams.
-- `styles/`: Stylesheets for a visually appealing interface.
-- `js/`: JavaScript files for interactive functionalities.
-- `images/`: Image resources for user interface elements.
+## Contributing
 
-## Usage
+Contributions are welcome! Feel free to submit a pull request or open an issue for any suggestions or improvements.
 
-To use the Team Manager Application, follow these steps:
+## Acknowledgements
 
-1. Set up a web server with PHP support.
-2. Clone or download the project repository to your web server.
-3. Create a MySQL database for user and team data and update the database connection details in the PHP files.
-4. Access the application through your web server, create an account, and start managing your teams and tasks.
-
-Feel free to explore and use this Team Manager Application as a reference for your own projects. 
+This project was developed to help teams efficiently manage their tasks and improve productivity through streamlined task assignments and progress tracking.
